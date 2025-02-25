@@ -13,18 +13,24 @@
             background-color: #f4f4f9;
             color: #333;
         }
-        header {
-            background: #F5333F;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            background: #011E41;
-            color: #fff;
-            padding: 0.5rem;
-            text-align: center;
-        }
+	header {
+	    background: #F5333F;
+	    color: #fff;
+	    padding: 1rem;
+	    text-align: center;
+	    position: sticky;
+	    top: 0;
+	    z-index: 1000;
+	}
+	nav {
+	    background: #011E41;
+	    color: #fff;
+	    padding: 0.5rem;
+	    text-align: center;
+	    position: sticky;
+	    top: 190px; /* Add this */
+	    z-index: 999; /* Add this */
+	}
         nav a {
             color: #fff;
             margin: 0 1rem;
@@ -64,17 +70,24 @@
             height: 300px;
             border: 0;
         }
+        .logo {
+            width: 150px;
+            margin-right: 2rem;
+        }
     </style>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="img/ifrc.png" alt="Organization Logo">
+        </div>
         <h1>Global Disaster Management and Crisis Working Group Meeting</h1>
-        <p>18-20 June 2025 | Ulaanbaatar-Mongolia</p>
+        <p>18-20 June 2025 | Ulaanbaatar, Mongolia</p>
     </header>
 
     <nav>
         <a href="#about">About</a>
-        <a href="#schedule">Schedule</a>
+        <a href="#arrival">Arrival Information</a>
         <a href="#venue">Venue</a>
         <a href="#transportation">Transportation</a>
         <a href="#attractions">Attractions</a>
@@ -85,13 +98,16 @@
         <p>Welcome to the Disaster Crisis Working Group Meeting in Ulaanbaatar, Mongolia! This event brings together experts and stakeholders to discuss disaster management strategies and foster collaboration.</p>
     </section>
 
-    <section id="schedule">
-        <h2>Event Schedule</h2>
-        <ul>
-            <li><strong>June 13:</strong> Opening Ceremony and Keynote Speeches</li>
-            <li><strong>June 14:</strong> Workshops and Panel Discussions</li>
-            <li><strong>June 15:</strong> Closing Remarks and Social Evening</li>
-        </ul>
+    <section id="arrival">
+        <h2>Arrival Information</h2>
+        <h3>Travel Restrictions</h3>
+        <p>Mongolia fully opened its air borders to international travel on February 14, 2022. No negative PCR or rapid test results are required to enter Mongolia before departure. No testing is required upon arrival at the border points. No quarantine or self-isolation is required.</p>
+        
+        <h3>Before Arrival</h3>
+        <p>All visitors to Mongolia must hold a valid passport with a minimum validity of 6 months from the date of entry. If a visa is required, visitors must have a valid visa or entry permission letter for entry into Mongolia.</p>
+
+        <h3>Upon Arrival</h3>
+        <p>Chinggis Khaan International Airport is the second largest airport in Mongolia, featuring six terminals. Please follow the signs for immigration and baggage claim. Mongolian Red Cross Society staff will be waiting to assist with airport pick-up.</p>
     </section>
 
     <section id="venue">
