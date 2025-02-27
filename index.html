@@ -3,141 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Disaster Management and Crisis Working Group Meeting, Mongolia</title>
+    <title>Global Disaster and Crisis Working Group Meeting</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
         }
-	header {
-	    background: #F5333F;
-	    color: #fff;
-	    padding: 1rem;
-	    text-align: center;
-	    position: sticky;
-	    top: 0;
-	    z-index: 1000;
-	}
-	nav {
-	    background: #011E41;
-	    color: #fff;
-	    padding: 0.5rem;
-	    text-align: center;
-	    position: sticky;
-	    top: 168px; /* Add this */
-	    z-index: 999; /* Add this */
-	}
-        nav a {
-            color: #fff;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 1.5rem;
-            margin: 1rem auto;
-            max-width: 800px;
-            background: #fff;
-            border-radius: 8px;
+
+        /* Header Styles */
+        header {
+            background: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        footer {
+            padding: 1rem 2rem;
             text-align: center;
-            padding: 1rem;
-            background: #011E41;
-            color: #fff;
             margin-top: 1rem;
         }
-        .btn {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .btn:hover {
-            background: #0056b3;
-        }
-        .map {
+
+        /* Main Navigation Styles */
+        .main-nav {
+            background: #011E41;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             width: 100%;
-            height: 300px;
-            border: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .logo {
-            width: 150px;
+
+        .main-nav nav {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-logo {
             margin-right: 2rem;
         }
-    </style>
+
+        .nav-logo img {
+            width: 80px;
+            height: 80px;
+            vertical-align: middle;
+        }
+
+        .menu-items {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .menu-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-dropdown a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #011E41;
+            min-width: 250px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            text-align: left;
+            top: 100%;
+        }
+
+        .menu-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #1a3456;
+        }
+
+        /* Icon Navigation Styles */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .nav-item {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .nav-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-item h3 {
+            font-size: 1rem;
+            margin: 0.5rem 0 0;
+            color: #d2232a;
+        }
+
+        .nav-item p {
+            font-size: 0.9rem;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Content Section */
+        .content-section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .content-section h2 {
+            text-align: center;
+            color: #d2232a;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-section ul li {
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .hero {
+            background: url('https://placehold.co/1200x400') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+            color: #ffcccb;
+        }
+
+        /* Participants Section Styles */
+        .participants-summary {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .summary-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            background: #f8f8f8;
+            border-radius: 8px;
+            min-width: 150px;
+        }
+
+        .summary-box .summary-icon {
+            width: 50px;  /* Adjust this value as needed */
+            height: 50px; /* Adjust this value as needed */
+            object-fit: contain; /* This maintains the image aspect ratio */
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-box .count {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d2232a;
+        }
+
+        .summary-box .label {
+            color: #666;
+        }
+
+        .participants-details details {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f8f8;
+            border-radius: 8px;
+        }
+
+        .participants-details summary {
+            cursor: pointer;
+            color: #d2232a;
+            font-weight: bold;
+        }
+
+        .participants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .participant-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 4px;
+        }
+
+        .participant-item img {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .participants-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+            </style>
 </head>
 <body>
+    <!-- Main Navigation -->
+    <div class="main-nav">
+        <nav>
+            <div class="nav-logo">
+                <img src="img/ifrc.png" alt="IFRC Logo">
+            </div>
+            <div class="menu-items">
+                <div class="menu-dropdown">
+                    <a href="#dcwg-reference">DCWG Reference Information</a>
+                    <div class="dropdown-content">
+                        <a href="#">TOR DCWG</a>
+                        <a href="#">2022 DCWG Vienna Meeting Minutes</a>
+                        <a href="#">2023 DCWG Turin Meeting Minutes</a>
+                        <a href="#">2024 DCWG Stockholm Meeting Minutes</a>
+                    </div>
+                </div>
+                <div class="menu-dropdown">
+                    <a href="#logistics">Logistics Info</a>
+                    <div class="dropdown-content">
+                        <a href="#">Practical Information</a>
+                        <a href="#">Welcome Pack</a>
+                    </div>
+                </div>
+                <a href="#venue" style="color: white; text-decoration: none;">Venue</a>
+                <a href="#participants" style="color: white; text-decoration: none;">Participants</a>
+                <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header -->
     <header>
-        <div class="logo">
-           <!-- <img src="img/ifrc.png" alt="Organization Logo"> -->
-        </div>
         <h1>Global Disaster and Crisis Working Group Meeting</h1>
         <p>18-20 June 2025 | Ulaanbaatar, Mongolia</p>
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#arrival">Arrival Information</a>
-        <a href="#venue">Venue</a>
-        <a href="#transportation">Transportation</a>
-        <a href="#attractions">Attractions</a>
-    </nav>
+    <!-- Icon Navigation -->
+    <div class="nav-container">
+        <div class="nav-item">
+            <img src="https://placehold.co/100x100" alt="NS Preparedness">
+            <h3>NS Preparedness</h3>
+            <p>Reference information</p>
+        </div>
+        <div class="nav-item">
+            <img src="https://placehold.co/100x100" alt="Logistics">
+            <h3>Logistics</h3>
+            <p>Practical info & documents to sign</p>
+        </div>
+        <div class="nav-item">
+            <img src="https://placehold.co/100x100" alt="Contact">
+            <h3>Contact</h3>
+            <p>For questions</p>
+        </div>
+        <div class="nav-item">
+            <img src="https://placehold.co/100x100" alt="Participants">
+            <h3>Participants</h3>
+            <p>NSs and IFRC teams</p>
+        </div>
+    </div>
 
-    <section id="about">
-        <h2>About the Event</h2>
-        <p>Welcome to the Disaster Crisis Working Group Meeting in Ulaanbaatar, Mongolia! This event brings together experts and stakeholders to discuss disaster management strategies and foster collaboration.</p>
-    </section>
+    <!-- Contact Section -->
+    <div class="content-section">
+        <h2>Contact for Questions</h2>
+        <h3>Relating to meeting programme:</h3>
+        <p><strong>Munguntuya Sharavnyambuu</strong><br>
+        Disaster management team leader, Mongolia Red Cross Society<br>
+        Email: munguntuya.sh@redcross.mn</p>
 
-    <section id="arrival">
-        <h2>Arrival Information</h2>
-        <h3>Travel Restrictions</h3>
-        <p>Mongolia fully opened its air borders to international travel on February 14, 2022. No negative PCR or rapid test results are required to enter Mongolia before departure. No testing is required upon arrival at the border points. No quarantine or self-isolation is required.</p>
-        
-        <h3>Before Arrival</h3>
-        <p>All visitors to Mongolia must hold a valid passport with a minimum validity of 6 months from the date of entry. If a visa is required, visitors must have a valid visa or entry permission letter for entry into Mongolia.</p>
+        <p><strong>Felipe Del Cid</strong><br>
+        Evolving Crisis and Disasters Lead, IFRC APRO<br>
+        Email: felipe.delcid@ifrc.org</p>
 
-        <h3>Upon Arrival</h3>
-        <p>Chinggis Khaan International Airport is the second largest airport in Mongolia, featuring six terminals. Please follow the signs for immigration and baggage claim. Mongolian Red Cross Society staff will be waiting to assist with airport pick-up.</p>
-    </section>
+        <h3>Relating to admin/logistics:</h3>
+        <p><strong>Jessie Lucien</strong><br>
+        Programme Officer, IFRC APRO<br>
+        Email: jessie.lucien@ifrc.org<br>
+        Phone: +60194060508</p>
+    </div>
 
-    <section id="venue">
-        <h2>Venue</h2>
-        <p>The meeting will be held at the Mongolian Red Cross Society building:</p>
-        <p><strong>Address:</strong> The International Youth Training Center is located 68 km east of Ulaanbaatar city in Erdene soum of Tuv province. Set in 9 acres of beautiful land, the training center is just 7km from the largest horse-riding statue in the world, the Chinggis Khaan Statue, one of the most visited tourist attraction sites in Mongolia</p>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2677.5232656444186!2d107.58532144606994!3d47.848828393743716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d9430a3f4d9ca09%3A0x6f6223d6a6b83fa1!2sMongolia%20Red%20Cross%20Youth%20Development%20Centre!5e0!3m2!1sen!2sid!4v1740494423067!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
+<!-- Participants Section -->
+<div class="content-section">
+    <h2>Participants</h2>
+<div class="participants-summary">
+    <div class="summary-box">
+        <img src="img/rcrcs.png" alt="NS Icon" class="summary-icon">
+        <span class="count">6</span>
+        <span class="label">National Societies</span>
+    </div>
+    <div class="summary-box">
+        <img src="img/ifrc.png" alt="IFRC Icon" class="summary-icon">
+        <span class="count">4</span>
+        <span class="label">IFRC Offices</span>
+    </div>
+</div>
+    <div class="participants-details">
+        <details>
+            <summary>View National Societies</summary>
+            <div class="participants-grid">
+                <div class="participant-item">
+                    <img src="img/pmi.png" alt="RC Icon">
+                    Indonesian Red Cross
+                </div>
+                <div class="participant-item">
+                    <img src="https://placehold.co/20x20" alt="RC Icon">
+                    Malaysian Red Crescent
+                </div>
+                <div class="participant-item">
+                    <img src="https://placehold.co/20x20" alt="RC Icon">
+                    American Red Cross
+                </div>
+                <div class="participant-item">
+                    <img src="https://placehold.co/20x20" alt="RC Icon">
+                    Timor-Leste Red Cross
+                </div>
+                <div class="participant-item">
+                    <img src="https://placehold.co/20x20" alt="RC Icon">
+                    Irish Red Cross
+                </div>
+                <div class="participant-item">
+                    <img src="https://placehold.co/20x20" alt="RC Icon">
+                    British Red Cross
+                </div>
+                <!-- Repeat for other NS -->
+            </div>
+        </details>
+        <details>
+            <summary>View IFRC Participants</summary>
+            <div class="participants-grid">
+                <div class="participant-item">
+                    <img src="img/ifrc.png" alt="IFRC Icon">
+                    IFRC Asia-Pacific
+                </div>
+                <div class="participant-item">
+                    <img src="img/ifrc.png" alt="IFRC Icon">
+                    IFRC Africa
+                </div>
+                <div class="participant-item">
+                    <img src="https://placehold.co/20x20" alt="IFRC Icon">
+                    IFRC America
+                </div>
+                <div class="participant-item">
+                    <img src="https://placehold.co/20x20" alt="IFRC Icon">
+                    IFRC Europe
+                </div>
+                <!-- Repeat for other IFRC offices -->
+            </div>
+        </details>
+    </div>
+</div>
 
-    <section id="transportation">
-        <h2>Transportation</h2>
-        <p>Getting to and from the venue:</p>
-        <ul>
-            <li><strong>From Chinggis Khaan International Airport:</strong> Taxi fares range from 100,000 to 150,000 MNT. Pre-booked taxis are recommended.</li>
-            <li><strong>Public Transport:</strong> Bus fare is 10,000 MNT for adults and 5,000 MNT for children. Routes include Bus line 1 and Bus line 2.</li>
-        </ul>
-    </section>
-
-    <section id="attractions">
-        <h2>Discover Ulaanbaatar</h2>
-        <p>Explore some of Ulaanbaatar's most iconic attractions:</p>
-        <ul>
-            <li><strong>Gandan Temple:</strong> A significant Buddhist site and one of the greatest temples in Mongolia.</li>
-            <li><strong>Parliament House:</strong> A striking landmark combining traditional and modern architecture.</li>
-            <li><strong>Zaisan Hill Memorial:</strong> Offers panoramic views of the city and commemorates Soviet soldiers who died in World War II.</li>
-            <li><strong>Khustain Nuru National Park:</strong> Home to the wild Takhi horse (Przewalski's horse).</li>
-            <li><strong>Chinggis Khaan Museum:</strong> Learn about the history of Chinggis Khaan and Mongolian culture.</li>
-        </ul>
-    </section>
-
+    <!-- Footer -->
     <footer>
         <p>Contact <a href="mailto:info@redcross.mn">info@redcross.mn</a> | Phone +976 777 0508</p>
         <p>&copy; 2025 Mongolian Red Cross Society</p>
