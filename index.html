@@ -242,10 +242,12 @@
             background: white;
             border-radius: 4px;
         }
-
-        .participant-item img {
-            width: 20px;
-            height: 20px;
+        
+        .participant-icon {
+            width: 30px; /* Set the desired width */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
+            object-fit: contain; /* Ensures the image fits within the box without distortion */
+            border-radius: 4px; /* Optional: Add rounded corners */
         }
 
         @media (max-width: 768px) {
@@ -355,28 +357,28 @@
             <summary>View National Societies</summary>
             <div class="participants-grid">
                 <div class="participant-item">
-                    <img src="img/cross.png" alt="RC Icon">
+                    <img src="img/cross.png" alt="Indonesian Red Cross" class="participant-icon">
                     Indonesian Red Cross
                 </div>
                 <div class="participant-item">
-                    <img src="img/crescent.png" alt="RC Icon">
-                    Malaysian Red Crescent
-                </div>
-                <div class="participant-item">
-                    <img src="img/cross.png" alt="RC Icon">
+                    <img src="img/cross.png" alt="American Red Cross" class="participant-icon">
                     American Red Cross
                 </div>
                 <div class="participant-item">
-                    <img src="img/cross.png" alt="RC Icon">
-                    Timor-Leste Red Cross
-                </div>
-                <div class="participant-item">
-                    <img src="img/crescent.png" alt="RC Icon">
+                    <img src="img/crescent.png" alt="Turkish Red Crescent" class="participant-icon">
                     Turkish Red Crescent
                 </div>
                 <div class="participant-item">
-                    <img src="img/cross.png" alt="RC Icon">
-                    British Red Cross
+                    <img src="img/cross.png" alt="Timor-Leste Red Cross" class="participant-icon">
+                    Timor-Leste
+                </div>
+                <div class="participant-item">
+                    <img src="img/crescent.png" alt="Malaysian Red Crescent" class="participant-icon">
+                    Malaysian Red Crescent
+                </div>
+                <div class="participant-item">
+                    <img src="img/crescent.png" alt="Kyrgistan Red Crescent" class="participant-icon">
+                    Kyrgistan Red Crescent
                 </div>
                 <!-- Repeat for other NS -->
             </div>
@@ -385,20 +387,20 @@
             <summary>View IFRC Participants</summary>
             <div class="participants-grid">
                 <div class="participant-item">
-                    <img src="img/ifrc-logo-only.png" alt="IFRC Icon">
+                    <img src="img/ifrc-logo-only.png" alt="IFRC Asia-Pacific" class="participant-icon">
                     IFRC Asia-Pacific
                 </div>
                 <div class="participant-item">
-                    <img src="img/ifrc-logo-only.png" alt="IFRC Icon">
-                    IFRC Africa
-                </div>
-                <div class="participant-item">
-                    <img src="img/ifrc-logo-only.png" alt="IFRC Icon">
+                    <img src="img/ifrc-logo-only.png" alt="IFRC America" class="participant-icon">
                     IFRC America
                 </div>
                 <div class="participant-item">
-                    <img src="img/ifrc-logo-only.png" alt="IFRC Icon">
+                    <img src="img/ifrc-logo-only.png" alt="IFRC Europe" class="participant-icon">
                     IFRC Europe
+                </div>
+                <div class="participant-item">
+                    <img src="img/ifrc-logo-only.png" alt="IFRC Africa" class="participant-icon">
+                    IFRC Africa
                 </div>
                 <!-- Repeat for other IFRC offices -->
             </div>
