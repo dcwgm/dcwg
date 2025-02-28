@@ -47,7 +47,7 @@
             border-radius: 8px; /* Match header border-radius */
         }
         
-        header h1, header p {
+        header h1, header p, header .registration-notice {
             position: relative;
             z-index: 2; /* Place text above the overlay */
         }
@@ -60,6 +60,36 @@
         header p {
             font-size: 1.2rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Registration Notice Styles */
+        .registration-notice {
+            background-color: rgba(210, 35, 42, 0.9); /* Red with slight transparency */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        /* Add this to your CSS styles section */
+        .registration-notice a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .registration-notice a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         /* Introduction Styles */
@@ -91,10 +121,19 @@
             margin-right: 1rem; /* Reduced from 2rem to 1rem */
         }
 
+        .nav-logo a {
+            display: block;
+        }
+
         .nav-logo img {
             width: 60px; /* Reduced from 80px to 60px */
             height: 60px; /* Reduced from 80px to 60px */
             vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-logo img:hover {
+            transform: scale(1.1);
         }
 
         .menu-items {
@@ -214,13 +253,13 @@
         }
 
         /* Remove extra padding for sections that need to be targeted by navigation */
-        #venue, #transportation, #participants, #contact {
+        #venue, #transportation, #participants, #contact, #agenda {
             padding-top: 1; /* Remove the extra padding */
             margin-top: 1rem;
         }
 
         /* Add scroll-margin-top to handle the fixed navigation */
-        #venue, #transportation, #participants, #contact {
+        #venue, #transportation, #participants, #contact, #agenda {
             scroll-margin-top: 70px;
         }
 
@@ -384,11 +423,13 @@
             font-weight: bold;
         }
 
+        /* Modified participants grid to have exactly two columns */
         .participants-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: 1fr 1fr; /* Exactly two columns */
             gap: 0.75rem;
             margin-top: 0.75rem;
+            padding-right: 0; /* Remove excess padding on the right */
         }
 
         .participant-item {
@@ -431,7 +472,9 @@
     <div class="main-nav">
         <nav>
             <div class="nav-logo">
-                <img src="img/ifrc.png" alt="IFRC Logo">
+                <a href="https://dcwg.site" title="DCWG Home">
+                    <img src="img/ifrc.png" alt="IFRC Logo">
+                </a>
             </div>
             <div class="menu-items">
                 <div class="menu-dropdown">
@@ -441,6 +484,15 @@
                         <a href="docs/2022 DCWG Vienna Meeting Minutes.pdf" target="_blank">2022 DCWG Vienna Meeting Minutes</a>
                         <a href="docs/2023 DCWG Turin 2023 Summary Final.pdf" target="_blank">2023 DCWG Turin Meeting Minutes</a>
                         <a href="docs/2024 DCWG Stockholmeeting minutes.pdf" target="_blank">2024 DCWG Stockholm Meeting Minutes</a>
+                    </div>
+                </div>
+                <div class="menu-dropdown">
+                    <a href="#agenda" onclick="scrollToSection('agenda')">Agenda etc.</a>
+                    <div class="dropdown-content">
+                        <a href="#agenda">Agenda</a>
+                        <a href="#meeting-ppt">Meeting PPT</a>
+                        <a href="#miro-board">Miro Board</a>
+                        <a href="#event-pictures">Event Pictures</a>
                     </div>
                 </div>
                 <div class="menu-dropdown">
@@ -479,6 +531,9 @@
     <header>
         <h1>Global Disaster and Crisis Working Group Meeting</h1>
         <p>18-20 June 2025 | Ulaanbaatar, Mongolia</p>
+        <div class="registration-notice">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=5Tu1ok5zbE6rDdGE9g_ZF8cMoojfT8RIlNJ8fzp5sjdUOVJXM1UyVjhRS0xPWElEMjkwMFkyNjY3Ty4u" target="_blank">Register now – Deadline: 30 April 2025!</a>
+        </div>
     </header>
 
     <!-- Introduction Section with Narrative -->
@@ -495,6 +550,38 @@
             <p>Building on previous meetings in Stockholm (2024), Turin (2023), and Vienna (2022), the Mongolian Red Cross Society (MRCS) will host this year's DCWG Annual Meeting from 18-20 June 2025 in Ulaanbaatar, Mongolia.</p>
         </section>
     </div>
+
+    <!-- Agenda Section (New) -->
+    <section id="agenda" class="content-section">
+        <h2>Agenda and Meeting Materials</h2>
+        <div id="agenda-content">
+            <h3>Meeting Agenda</h3>
+            <p>The detailed agenda for the 2025 DCWG Annual Meeting is available for download:</p>
+            <p><a href="docs/DCWG_2025_Agenda.pdf" target="_blank">Download Agenda (PDF)</a></p>
+        </div>
+        
+        <div id="meeting-ppt">
+            <h3>Meeting Presentations</h3>
+            <p>Presentation materials will be made available here during the meeting:</p>
+            <ul>
+                <li>Day 1 Presentations - <em>Coming soon</em></li>
+                <li>Day 2 Presentations - <em>Coming soon</em></li>
+                <li>Day 3 Presentations - <em>Coming soon</em></li>
+            </ul>
+        </div>
+        
+        <div id="miro-board">
+            <h3>Miro Board</h3>
+            <p>Access the collaborative Miro board for the meeting:</p>
+            <p><a href="https://miro.com/app/board/dcwg2025/" target="_blank">DCWG 2025 Miro Board</a></p>
+        </div>
+        
+        <div id="event-pictures">
+            <h3>Event Pictures</h3>
+            <p>Photos from the event will be shared here after the meeting.</p>
+            <p><em>Check back after June 20, 2025</em></p>
+        </div>
+    </section>
 
     <!-- Venue Section -->
     <section id="venue" class="content-section">
@@ -522,38 +609,6 @@
             <li><strong>Public Transport:</strong> Bus fare is 10,000 MNT for adults and 5,000 MNT for children. Routes include Bus line 1 and Bus line 2.</li>
         </ul>
     </section>
-
-    <!-- Icon Navigation -->
-    <!-- <div class="nav-container">
-        <div class="nav-item">
-            <a href="#dcwg-reference" onclick="scrollToSection('dcwg-reference')">
-                <img src="img/Image1.jpeg" alt="DCWG Agenda">
-                <h3>DCWG</h3>
-                <p>Agenda and Overview</p>
-            </a>
-        </div>
-        <div class="nav-item">
-            <a href="#logistics" onclick="scrollToSection('logistics')">
-                <img src="img/Image2.jpeg" alt="Logistics">
-                <h3>Logistics</h3>
-                <p>Practical info & documents to sign</p>
-            </a>
-        </div>
-        <div class="nav-item">
-            <a href="#contact" onclick="scrollToSection('contact')">
-                <img src="img/Image3.jpeg" alt="Contact">
-                <h3>Contact</h3>
-                <p>For questions</p>
-            </a>
-        </div>
-        <div class="nav-item">
-            <a href="#participants" onclick="scrollToSection('participants')">
-                <img src="img/Image4.jpeg" alt="Participants">
-                <h3>Participants</h3>
-                <p>NSs and IFRC teams</p>
-            </a>
-        </div>
-    </div> -->
 
     <!-- Participants Section -->
     <section id="participants" class="content-section">
