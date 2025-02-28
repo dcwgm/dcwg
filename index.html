@@ -163,6 +163,8 @@
             background: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            margin-top: 70px; /* Add space for sticky header */
+            scroll-margin-top: 70px; /* Add space for sticky header */
         }
 
         .content-section h2 {
@@ -370,22 +372,24 @@
                     </div>
                 </div>
                 <div class="menu-dropdown">
-                    <a href="#venue">Venue</a>
+                    <a href="#venue" onclick="scrollToSection('venue')">Venue</a>
                     <div class="dropdown-content">
                         <a href="#venue">Venue Details</a>
                         <a href="#transportation">Transportation</a>
                     </div>
                 </div>
                 <div class="menu-dropdown">
-                    <a href="#participants">Participants</a>
+                    <a href="#participants" onclick="scrollToSection('participants')">Participants</a>
                     <div class="dropdown-content">
-                        <a href="#participants">View Participants</a>
+                        <a href="#participants-national">View National Societies</a>
+                        <a href="#participants-ifrc">View IFRC Participants</a>
                     </div>
                 </div>
                 <div class="menu-dropdown">
-                    <a href="#contact">Contact</a>
+                    <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
                     <div class="dropdown-content">
-                        <a href="#contact">Contact Information</a>
+                        <a href="#contact-meeting">Meeting Programme</a>
+                        <a href="#contact-admin">Administrative/Logistics</a>
                     </div>
                 </div>
             </div>
@@ -472,7 +476,7 @@
     </div>
 
     <!-- Participants Section -->
-    <div class="content-section">
+    <section id="participants" class="content-section">
         <h2>Participants</h2>
         <div class="participants-summary">
             <div class="summary-box">
@@ -486,99 +490,100 @@
                 <span class="label">IFRC Offices</span>
             </div>
         </div>
-        <div class="participants-details">
-            <details>
-                <summary>View National Societies</summary>
-                <div class="participants-grid">
-                    <div class="participant-item">
-                        <img src="img/cross.png" alt="Indonesian Red Cross" class="participant-icon">
-                        Indonesian Red Cross
-                    </div>
-                    <div class="participant-item">
-                        <img src="img/cross.png" alt="American Red Cross" class="participant-icon">
-                        American Red Cross
-                    </div>
-                    <div class="participant-item">
-                        <img src="img/crescent.png" alt="Turkish Red Crescent" class="participant-icon">
-                        Turkish Red Crescent
-                    </div>
-                    <div class="participant-item">
-                        <img src="img/cross.png" alt="Timor-Leste Red Cross" class="participant-icon">
-                        Timor-Leste
-                    </div>
-                    <div class="participant-item">
-                        <img src="img/crescent.png" alt="Malaysian Red Crescent" class="participant-icon">
-                        Malaysian Red Crescent
-                    </div>
-                    <div class="participant-item">
-                        <img src="img/crescent.png" alt="Kyrgistan Red Crescent" class="participant-icon">
-                        Kyrgistan Red Crescent
-                    </div>
+        <div id="participants-national" class="participants-national">
+            <h3>National Societies</h3>
+            <div class="participants-grid">
+                <div class="participant-item">
+                    <img src="img/cross.png" alt="Indonesian Red Cross" class="participant-icon">
+                    Indonesian Red Cross
                 </div>
-            </details>
-            <details>
-                <summary>View IFRC Participants</summary>
-                <div class="participants-grid">
-                    <div class="participant-item">
-                        <img src="img/ifrc-logo-only.png" alt="IFRC Asia-Pacific" class="participant-icon">
-                        IFRC Asia-Pacific
-                    </div>
-                    <div class="participant-item">
-                        <img src="img/ifrc-logo-only.png" alt="IFRC America" class="participant-icon">
-                        IFRC America
-                    </div>
-                    <div class="participant-item">
-                        <img src="img/ifrc-logo-only.png" alt="IFRC Europe" class="participant-icon">
-                        IFRC Europe
-                    </div>
-                    <div class="participant-item">
-                        <img src="img/ifrc-logo-only.png" alt="IFRC Africa" class="participant-icon">
-                        IFRC Africa
-                    </div>
+                <div class="participant-item">
+                    <img src="img/cross.png" alt="American Red Cross" class="participant-icon">
+                    American Red Cross
                 </div>
-            </details>
+                <div class="participant-item">
+                    <img src="img/crescent.png" alt="Turkish Red Crescent" class="participant-icon">
+                    Turkish Red Crescent
+                </div>
+                <div class="participant-item">
+                    <img src="img/cross.png" alt="Timor-Leste Red Cross" class="participant-icon">
+                    Timor-Leste
+                </div>
+                <div class="participant-item">
+                    <img src="img/crescent.png" alt="Malaysian Red Crescent" class="participant-icon">
+                    Malaysian Red Crescent
+                </div>
+                <div class="participant-item">
+                    <img src="img/crescent.png" alt="Kyrgistan Red Crescent" class="participant-icon">
+                    Kyrgistan Red Crescent
+                </div>
+            </div>
         </div>
-    </div>
+        <div id="participants-ifrc" class="participants-ifrc">
+            <h3>IFRC Participants</h3>
+            <div class="participants-grid">
+                <div class="participant-item">
+                    <img src="img/ifrc-logo-only.png" alt="IFRC Asia-Pacific" class="participant-icon">
+                    IFRC Asia-Pacific
+                </div>
+                <div class="participant-item">
+                    <img src="img/ifrc-logo-only.png" alt="IFRC America" class="participant-icon">
+                    IFRC America
+                </div>
+                <div class="participant-item">
+                    <img src="img/ifrc-logo-only.png" alt="IFRC Europe" class="participant-icon">
+                    IFRC Europe
+                </div>
+                <div class="participant-item">
+                    <img src="img/ifrc-logo-only.png" alt="IFRC Africa" class="participant-icon">
+                    IFRC Africa
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
-    <div class="content-section">
-        <h2>Contact for Questions</h2>
-        
-        <div class="contact-category">
-            <h3 class="contact-category-title">Meeting Programme</h3>
-            <div class="contact-card">
-                <div class="contact-person">
-                    <h4 class="contact-name">Munguntuya Sharavnyambuu</h4>
-                    <p class="contact-role">Disaster management team leader, Mongolia Red Cross Society</p>
-                    <p class="contact-info">Email: 
-                        <a href="mailto:munguntuya.sh@redcross.mn" class="email-link">munguntuya.sh@redcross.mn</a>
-                    </p>
-                </div>
-                <div class="contact-person">
-                    <h4 class="contact-name">Felipe Del Cid</h4>
-                    <p class="contact-role">Evolving Crisis and Disasters Lead, IFRC APRO</p>
-                    <p class="contact-info">Email: 
-                        <a href="mailto:felipe.delcid@ifrc.org" class="email-link">felipe.delcid@ifrc.org</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-category">
-            <h3 class="contact-category-title">Administrative/Logistics</h3>
-            <div class="contact-card">
-                <div class="contact-person">
-                    <h4 class="contact-name">Jessie Lucien</h4>
-                    <p class="contact-role">Programme Officer, IFRC APRO</p>
-                    <p class="contact-info">Email: 
-                        <a href="mailto:jessie.lucien@ifrc.org" class="email-link">jessie.lucien@ifrc.org</a><br>
-                    Phone: 
-                        <a href="tel:+60194060508" class="phone-link">+60194060508</a>
-                    </p>
+    <section id="contact" class="content-section">
+        <div id="contact-meeting" class="contact-meeting">
+            <h3>Meeting Programme</h3>
+            <div class="contact-category">
+                <h3 class="contact-category-title">Meeting Programme</h3>
+                <div class="contact-card">
+                    <div class="contact-person">
+                        <h4 class="contact-name">Munguntuya Sharavnyambuu</h4>
+                        <p class="contact-role">Disaster management team leader, Mongolia Red Cross Society</p>
+                        <p class="contact-info">Email: 
+                            <a href="mailto:munguntuya.sh@redcross.mn" class="email-link">munguntuya.sh@redcross.mn</a>
+                        </p>
+                    </div>
+                    <div class="contact-person">
+                        <h4 class="contact-name">Felipe Del Cid</h4>
+                        <p class="contact-role">Evolving Crisis and Disasters Lead, IFRC APRO</p>
+                        <p class="contact-info">Email: 
+                            <a href="mailto:felipe.delcid@ifrc.org" class="email-link">felipe.delcid@ifrc.org</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div id="contact-admin" class="contact-admin">
+            <h3>Administrative/Logistics</h3>
+            <div class="contact-category">
+                <h3 class="contact-category-title">Administrative/Logistics</h3>
+                <div class="contact-card">
+                    <div class="contact-person">
+                        <h4 class="contact-name">Jessie Lucien</h4>
+                        <p class="contact-role">Programme Officer, IFRC APRO</p>
+                        <p class="contact-info">Email: 
+                            <a href="mailto:jessie.lucien@ifrc.org" class="email-link">jessie.lucien@ifrc.org</a><br>
+                        Phone: 
+                            <a href="tel:+60194060508" class="phone-link">+60194060508</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -597,11 +602,13 @@
             const section = document.getElementById(sectionId);
             section.classList.add('active-section');
 
-            // Smooth scroll to the section
-            section.scrollIntoView({ behavior: 'smooth' });
+            // Smooth scroll to the section with offset for sticky header
+            const navHeight = document.querySelector('.main-nav').offsetHeight;
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.scrollBy(0, -navHeight); // Adjust for sticky header
 
             // Highlight the corresponding main navigation link
-            const navLink = document.querySelector(`[href="#${sectionId}]`);
+            const navLink = document.querySelector(`[href="#${sectionId}"]`);
             if (navLink) {
                 navLink.style.backgroundColor = '#f8f9fa';
                 navLink.style.color = '#d2232a';
