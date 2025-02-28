@@ -142,9 +142,8 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin: 2rem 0;
             max-width: 800px;
-            margin: 2rem auto;
+            margin: 1rem auto; /* Reduced margin from 2rem to 1rem */
         }
 
         .nav-item {
@@ -193,18 +192,29 @@
         /* Content Section */
         .content-section {
             max-width: 800px;
-            margin: 2rem auto;
+            margin: 1rem auto; /* Reduced margin from 2rem to 1rem */
             padding: 1rem;
             background: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            margin-top: 70px;
             scroll-margin-top: 70px;
+        }
+
+        /* First content section after header needs less top margin */
+        header + .content-section {
+            margin-top: 1rem;
+        }
+
+        /* Adjust spacing for sections that need to be targeted by navigation */
+        #venue, #transportation, #participants, #contact {
+            margin-top: 1rem; /* Reduced from 70px */
+            padding-top: 70px; /* Keep this for scroll positioning with fixed nav */
         }
 
         .content-section h2 {
             text-align: center;
             color: #d2232a;
+            margin-top: 0.5rem; /* Reduced top margin */
         }
 
         .content-section ul {
@@ -218,21 +228,21 @@
 
         footer {
             text-align: center;
-            margin: 2rem 0;
+            margin: 1rem 0; /* Reduced from 2rem to 1rem */
             font-size: 0.9rem;
             color: #666;
         }
 
         /* Contact Section Specific Styles */
         .contact-category {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem; /* Reduced from 2rem to 1rem */
         }
 
         .contact-category-title {
             font-size: 1.5rem;
             color: #d2232a;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem; /* Reduced from 1rem to 0.5rem */
             padding-left: 1.5rem;
             position: relative;
         }
@@ -250,25 +260,25 @@
         .contact-card {
             background-color: #f8f9fa;
             border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem 0;
+            padding: 1rem; /* Reduced from 1.5rem to 1rem */
+            margin: 0.5rem 0; /* Reduced from 1rem to 0.5rem */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .contact-person {
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem; /* Reduced from 1rem to 0.5rem */
         }
 
         .contact-name {
             font-size: 1.2rem;
             color: #333;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem; /* Reduced from 0.5rem to 0.3rem */
         }
 
         .contact-role {
             font-size: 0.9rem;
             color: #666;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem; /* Reduced from 0.5rem to 0.3rem */
             line-height: 1.4;
         }
 
@@ -300,7 +310,7 @@
 
         @media (max-width: 768px) {
             .contact-card {
-                padding: 1rem;
+                padding: 0.75rem; /* Reduced from 1rem to 0.75rem */
             }
         }
 
@@ -308,15 +318,15 @@
         .participants-summary {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
+            gap: 1.5rem; /* Reduced from 2rem to 1.5rem */
+            margin: 1rem 0; /* Reduced from 2rem to 1rem */
         }
 
         .summary-box {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 1rem;
+            padding: 0.75rem; /* Reduced from 1rem to 0.75rem */
             background: #f8f8f8;
             border-radius: 8px;
             min-width: 150px;
@@ -326,7 +336,7 @@
             width: 50px;
             height: 50px;
             object-fit: contain;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem; /* Reduced from 0.5rem to 0.3rem */
         }
 
         .summary-box .count {
@@ -340,8 +350,8 @@
         }
 
         .participants-details details {
-            margin: 1rem 0;
-            padding: 1rem;
+            margin: 0.5rem 0; /* Reduced from 1rem to 0.5rem */
+            padding: 0.75rem; /* Reduced from 1rem to 0.75rem */
             background: #f8f8f8;
             border-radius: 8px;
         }
@@ -355,8 +365,8 @@
         .participants-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 0.75rem; /* Reduced from 1rem to 0.75rem */
+            margin-top: 0.75rem; /* Reduced from 1rem to 0.75rem */
         }
 
         .participant-item {
@@ -386,6 +396,11 @@
             padding-top: 70px;
             margin-top: -70px;
             scroll-margin-top: 70px;
+        }
+        
+        /* Section spacing */
+        section h3 {
+            margin-top: 0.5rem; /* Reduced top margin */
         }
     </style>
 </head>
@@ -588,7 +603,6 @@
     <!-- Contact Section -->
     <section id="contact" class="content-section">
         <div id="contact-meeting" class="contact-meeting">
-            <!-- <h3>Meeting Programme</h3> -->
             <div class="contact-category">
                 <h3 class="contact-category-title">Meeting Programme</h3>
                 <div class="contact-card">
@@ -610,7 +624,6 @@
             </div>
         </div>
         <div id="contact-admin" class="contact-admin">
-            <!-- <h3>Administrative/Logistics</h3> -->
             <div class="contact-category">
                 <h3 class="contact-category-title">Administrative/Logistics</h3>
                 <div class="contact-card">
