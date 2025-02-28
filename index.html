@@ -163,8 +163,8 @@
             background: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            margin-top: 70px; /* Add space for sticky header */
-            scroll-margin-top: 70px; /* Add space for sticky header */
+            margin-top: 70px;
+            scroll-margin-top: 70px;
         }
 
         .content-section h2 {
@@ -344,6 +344,13 @@
             .participants-grid {
                 grid-template-columns: 1fr;
             }
+        }
+
+        /* Participant Subsection Spacing */
+        #participants-national, #participants-ifrc {
+            padding-top: 70px;
+            margin-top: -70px;
+            scroll-margin-top: 70px;
         }
     </style>
 </head>
@@ -604,8 +611,16 @@
 
             // Smooth scroll to the section with offset for sticky header
             const navHeight = document.querySelector('.main-nav').offsetHeight;
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            window.scrollBy(0, -navHeight); // Adjust for sticky header
+            section.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest' 
+            });
+
+            // Add a small timeout to ensure the scroll completes
+            setTimeout(() => {
+                window.scrollBy(0, -navHeight);
+            }, 100);
 
             // Highlight the corresponding main navigation link
             const navLink = document.querySelector(`[href="#${sectionId}"]`);
