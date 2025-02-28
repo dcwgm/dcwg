@@ -29,30 +29,6 @@
             line-height: 1.6;
         }
 
-        .key-points {
-            margin-top: 2rem;
-        }
-
-        .key-points h3 {
-            color: #d2232a;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .key-points ul {
-            list-style-type: disc !important;
-            padding-left: 2rem !important;
-        }
-
-        .key-points ul li {
-            margin: 0.5rem 0;
-            line-height: 1.4;
-        }
-
-        .introduction p {
-            margin-bottom: 1rem;
-        }
-
         /* Main Navigation Styles */
         .main-nav {
             background: #011E41;
@@ -210,25 +186,88 @@
             color: #666;
         }
 
-        .hero {
-            background: url('https://placehold.co/1200x400') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
+        /* Contact Section Specific Styles */
+        .contact-category {
+            margin-bottom: 2rem;
         }
 
-        .hero h2 {
-            font-size: 2rem;
-            margin: 0;
+        .contact-category-title {
+            font-size: 1.5rem;
+            color: #d2232a;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
         }
 
-        .hero p {
+        .contact-category-title:before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #d2232a;
+        }
+
+        .contact-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-person {
+            margin-bottom: 1rem;
+        }
+
+        .contact-name {
             font-size: 1.2rem;
-            margin: 0.5rem 0 0;
-            color: #ffcccb;
+            color: #333;
+            margin-bottom: 0.5rem;
         }
 
-        /* Participants Section Styles */
+        .contact-role {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .email-link, .phone-link {
+            color: #d2232a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .email-link:hover, .phone-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Smooth Scroll and Active Section Highlight */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .active-section {
+            background-color: #f8f9fa;
+            border-left: 4px solid #d2232a;
+            padding-left: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-card {
+                padding: 1rem;
+            }
+        }
+
+        /* Participant Section Styles */
         .participants-summary {
             display: flex;
             justify-content: center;
@@ -363,14 +402,13 @@
     <div class="content-section">
         <section class="welcome-section">
             <h2>Welcome to the Movement Disaster and Crisis Working Group (DCWG)</h2>
-            <p>The Movement Disaster and Crisis Working Group (DCWG) is a group of experienced disaster managers from a range of National Societies, the Federation Secretariat, and the ICRC, who come together to promote the coordination and strengthening of our collective international disaster management. The DCWG is an informal group that seeks to bring together members with relevant international disaster management experience from recent operations.</p>
-            
-            <p>The group meets to share disaster management learning and analysis, particularly through the lens of recent operational experience, and to advance disaster management approaches, ideas, and solutions related to operational coordination and delivery. The DCWG also discusses and contributes to disaster management policies.</p>
+            <p>The Movement Disaster and Crisis Working Group (DCWG) is a group of experienced disaster managers from a range of National Societies, the Federation Secretariat, and the ICRC, who come together to promote the coordination and strengthening of our collective international disaster management.</p>
+            <p>The group meets to share disaster management learning and analysis, particularly through the lens of recent operational experience, and to advance disaster management approaches, ideas, and solutions related to operational coordination and delivery.</p>
         </section>
 
         <section class="annual-meeting-section">
             <h2>DCWG Annual Meeting 2025</h2>
-            <p>Building on previous meetings in Stockholm (2024), Turin (2023), and Vienna (2023), the Mongolian Red Cross Society (MRCS) will host this year's DCWG Annual Meeting from 18-20 June 2025 in Ulaanbaatar, Mongolia.</p>
+            <p>Building on previous meetings in Stockholm (2024), Turin (2023), and Vienna (2022), the Mongolian Red Cross Society (MRCS) will host this year's DCWG Annual Meeting from 18-20 June 2025 in Ulaanbaatar, Mongolia.</p>
         </section>
     </div>
 
@@ -378,7 +416,7 @@
     <section id="venue" class="content-section">
         <h2>Venue</h2>
         <p>The meeting will be held at the Mongolian Red Cross Society building:</p>
-        <p><strong>Address:</strong> The International Youth Training Center is located 68 km east of Ulaanbaatar city in Erdene soum of Tuv province. Set in 9 acres of beautiful land, the training center is just 7km from the largest horse-riding statue in the world, the Chinggis Khaan Statue, one of the most visited tourist attraction sites in Mongolia</p>
+        <p><strong>Address:</strong> The International Youth Training Center is located 68 km east of Ulaanbaatar city in Erdene soum of Tuv province. Set in 9 acres of beautiful land, the training center is just 7km from the largest horse-riding statue in the world, the Chinggis Khaan Statue, one of the most visited tourist attraction sites in Mongolia.</p>
         <div class="map-container">
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2677.5232656444186!2d107.58532144606994!3d47.848828393743716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d9430a3f4d9ca09%3A0x6f6223d6a6b83fa1!2sMongolia%20Red%20Cross%20Youth%20Development%20Centre!5e0!3m2!1sen!2sid!4v1740494423067!5m2!1sen!2sid" 
             width="100%" 
@@ -404,28 +442,28 @@
     <!-- Icon Navigation -->
     <div class="nav-container">
         <div class="nav-item">
-            <a href="#dcwg-reference">
+            <a href="#dcwg-reference" onclick="scrollToSection('dcwg-reference')">
                 <img src="img/Image1.jpeg" alt="DCWG Agenda">
                 <h3>DCWG</h3>
                 <p>Agenda and Overview</p>
             </a>
         </div>
         <div class="nav-item">
-            <a href="#logistics">
+            <a href="#logistics" onclick="scrollToSection('logistics')">
                 <img src="img/Image2.jpeg" alt="Logistics">
                 <h3>Logistics</h3>
                 <p>Practical info & documents to sign</p>
             </a>
         </div>
         <div class="nav-item">
-            <a href="#contact">
+            <a href="#contact" onclick="scrollToSection('contact')">
                 <img src="img/Image3.jpeg" alt="Contact">
                 <h3>Contact</h3>
                 <p>For questions</p>
             </a>
         </div>
         <div class="nav-item">
-            <a href="#participants">
+            <a href="#participants" onclick="scrollToSection('participants')">
                 <img src="img/Image4.jpeg" alt="Participants">
                 <h3>Participants</h3>
                 <p>NSs and IFRC teams</p>
@@ -505,20 +543,41 @@
     <!-- Contact Section -->
     <div class="content-section">
         <h2>Contact for Questions</h2>
-        <h3>Relating to meeting programme:</h3>
-        <p><strong>Munguntuya Sharavnyambuu</strong><br>
-        Disaster management team leader, Mongolia Red Cross Society<br>
-        Email: munguntuya.sh@redcross.mn</p>
+        
+        <div class="contact-category">
+            <h3 class="contact-category-title">Meeting Programme</h3>
+            <div class="contact-card">
+                <div class="contact-person">
+                    <h4 class="contact-name">Munguntuya Sharavnyambuu</h4>
+                    <p class="contact-role">Disaster management team leader, Mongolia Red Cross Society</p>
+                    <p class="contact-info">Email: 
+                        <a href="mailto:munguntuya.sh@redcross.mn" class="email-link">munguntuya.sh@redcross.mn</a>
+                    </p>
+                </div>
+                <div class="contact-person">
+                    <h4 class="contact-name">Felipe Del Cid</h4>
+                    <p class="contact-role">Evolving Crisis and Disasters Lead, IFRC APRO</p>
+                    <p class="contact-info">Email: 
+                        <a href="mailto:felipe.delcid@ifrc.org" class="email-link">felipe.delcid@ifrc.org</a>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-        <p><strong>Felipe Del Cid</strong><br>
-        Evolving Crisis and Disasters Lead, IFRC APRO<br>
-        Email: felipe.delcid@ifrc.org</p>
-
-        <h3>Relating to admin/logistics:</h3>
-        <p><strong>Jessie Lucien</strong><br>
-        Programme Officer, IFRC APRO<br>
-        Email: jessie.lucien@ifrc.org<br>
-        Phone: +60194060508</p>
+        <div class="contact-category">
+            <h3 class="contact-category-title">Administrative/Logistics</h3>
+            <div class="contact-card">
+                <div class="contact-person">
+                    <h4 class="contact-name">Jessie Lucien</h4>
+                    <p class="contact-role">Programme Officer, IFRC APRO</p>
+                    <p class="contact-info">Email: 
+                        <a href="mailto:jessie.lucien@ifrc.org" class="email-link">jessie.lucien@ifrc.org</a><br>
+                    Phone: 
+                        <a href="tel:+60194060508" class="phone-link">+60194060508</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -526,5 +585,28 @@
         <p>Contact <a href="mailto:info@redcross.mn">info@redcross.mn</a> | Phone +976 777 0508</p>
         <p>&copy; 2025 Mongolian Red Cross Society</p>
     </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            // Remove active class from all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active-section');
+            });
+
+            // Add active class to the clicked section
+            const section = document.getElementById(sectionId);
+            section.classList.add('active-section');
+
+            // Smooth scroll to the section
+            section.scrollIntoView({ behavior: 'smooth' });
+
+            // Highlight the corresponding main navigation link
+            const navLink = document.querySelector(`[href="#${sectionId}]`);
+            if (navLink) {
+                navLink.style.backgroundColor = '#f8f9fa';
+                navLink.style.color = '#d2232a';
+            }
+        }
+    </script>
 </body>
 </html>
