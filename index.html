@@ -16,11 +16,46 @@
 
         /* Header Styles */
         header {
-            background: #ffffff;
+            background-image: url('img/bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 1rem 2rem;
+            padding: 3rem 2rem;
             text-align: center;
-            margin-top: 1rem;
+            margin: 1rem auto;
+            color: white;
+            position: relative;
+            max-width: 800px; /* Match content section width */
+            border-radius: 8px; /* Match content section border-radius */
+        }
+        
+        /* Add an overlay to ensure text is readable on any background */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            z-index: 1;
+            border-radius: 8px; /* Match header border-radius */
+        }
+        
+        header h1, header p {
+            position: relative;
+            z-index: 2; /* Place text above the overlay */
+        }
+        
+        header h1 {
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Text shadow for better readability */
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         }
 
         /* Introduction Styles */
@@ -452,7 +487,7 @@
     </section>
 
     <!-- Icon Navigation -->
-    <div class="nav-container">
+    <!-- <div class="nav-container">
         <div class="nav-item">
             <a href="#dcwg-reference" onclick="scrollToSection('dcwg-reference')">
                 <img src="img/Image1.jpeg" alt="DCWG Agenda">
@@ -481,7 +516,7 @@
                 <p>NSs and IFRC teams</p>
             </a>
         </div>
-    </div>
+    </div> -->
 
     <!-- Participants Section -->
     <section id="participants" class="content-section">
