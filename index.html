@@ -160,6 +160,25 @@
             color: #333;
         }
 
+        /* Icon Navigation Clickable Styles */
+        .nav-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item a:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .nav-item a:hover h3,
+        .nav-item a:hover p {
+            color: #d2232a;
+        }
+
         /* Content Section */
         .content-section {
             max-width: 800px;
@@ -296,12 +315,12 @@
             </div>
             <div class="menu-items">
                 <div class="menu-dropdown">
-                    <a href="#dcwg-reference">DCWG Reference Information</a>
+                    <a href="#dcwg-reference">DCWG References</a>
                     <div class="dropdown-content">
-                        <a href="docs/DCWG TOR_Oct 2020 final.pdf">TOR DCWG</a>
-                        <a href="docs/2022 DCWG Vienna Meeting Minutes.pdf">2022 DCWG Vienna Meeting Minutes</a>
-                        <a href="docs/2023 DCWG Turin 2023 Summary Final.pdf">2023 DCWG Turin Meeting Minutes</a>
-                        <a href="docs/2024 DCWG Stockholmeeting minutes.pdf">2024 DCWG Stockholm Meeting Minutes</a>
+                        <a href="docs/DCWG TOR_Oct 2020 final.pdf" target="_blank">TOR DCWG</a>
+                        <a href="docs/2022 DCWG Vienna Meeting Minutes.pdf" target="_blank">2022 DCWG Vienna Meeting Minutes</a>
+                        <a href="docs/2023 DCWG Turin 2023 Summary Final.pdf" target="_blank">2023 DCWG Turin Meeting Minutes</a>
+                        <a href="docs/2024 DCWG Stockholmeeting minutes.pdf" target="_blank">2024 DCWG Stockholm Meeting Minutes</a>
                     </div>
                 </div>
                 <div class="menu-dropdown">
@@ -311,9 +330,25 @@
                         <a href="docs/WELCOME-to-the-Disaster-Crisis-Working-Group-Meeting-in-Stockholm.pdf">Welcome Pack</a>
                     </div>
                 </div>
-                <a href="#venue" style="color: white; text-decoration: none;">Venue</a>
-                <a href="#participants" style="color: white; text-decoration: none;">Participants</a>
-                <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
+                <div class="menu-dropdown">
+                    <a href="#venue">Venue</a>
+                    <div class="dropdown-content">
+                        <a href="#venue">Venue Details</a>
+                        <a href="#transportation">Transportation</a>
+                    </div>
+                </div>
+                <div class="menu-dropdown">
+                    <a href="#participants">Participants</a>
+                    <div class="dropdown-content">
+                        <a href="#participants">View Participants</a>
+                    </div>
+                </div>
+                <div class="menu-dropdown">
+                    <a href="#contact">Contact</a>
+                    <div class="dropdown-content">
+                        <a href="#contact">Contact Information</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
@@ -337,30 +372,6 @@
             <h2>DCWG Annual Meeting 2025</h2>
             <p>Building on previous meetings in Stockholm (2024), Turin (2023), and Vienna (2023), the Mongolian Red Cross Society (MRCS) will host this year's DCWG Annual Meeting from 18-20 June 2025 in Ulaanbaatar, Mongolia.</p>
         </section>
-    </div>
-
-    <!-- Icon Navigation -->
-    <div class="nav-container">
-        <div class="nav-item">
-            <img src="img/Image1.jpeg" alt="DCWG Agenda">
-            <h3>DCWG</h3>
-            <p><a href="dcwg.html" style="text-decoration: none; color: #333;">Agenda and Overview</a></p>
-        </div>
-        <div class="nav-item">
-            <img src="img/Image2.jpeg" alt="Logistics">
-            <h3>Logistics</h3>
-            <p>Practical info & documents to sign</p>
-        </div>
-        <div class="nav-item">
-            <img src="img/Image3.jpeg" alt="Contact">
-            <h3>Contact</h3>
-            <p>For questions</p>
-        </div>
-        <div class="nav-item">
-            <img src="img/Image4.jpeg" alt="Participants">
-            <h3>Participants</h3>
-            <p>NSs and IFRC teams</p>
-        </div>
     </div>
 
     <!-- Venue Section -->
@@ -390,25 +401,36 @@
         </ul>
     </section>
 
-
-
-    <!-- Contact Section -->
-    <div class="content-section">
-        <h2>Contact for Questions</h2>
-        <h3>Relating to meeting programme:</h3>
-        <p><strong>Munguntuya Sharavnyambuu</strong><br>
-        Disaster management team leader, Mongolia Red Cross Society<br>
-        Email: munguntuya.sh@redcross.mn</p>
-
-        <p><strong>Felipe Del Cid</strong><br>
-        Evolving Crisis and Disasters Lead, IFRC APRO<br>
-        Email: felipe.delcid@ifrc.org</p>
-
-        <h3>Relating to admin/logistics:</h3>
-        <p><strong>Jessie Lucien</strong><br>
-        Programme Officer, IFRC APRO<br>
-        Email: jessie.lucien@ifrc.org<br>
-        Phone: +60194060508</p>
+    <!-- Icon Navigation -->
+    <div class="nav-container">
+        <div class="nav-item">
+            <a href="#dcwg-reference">
+                <img src="img/Image1.jpeg" alt="DCWG Agenda">
+                <h3>DCWG</h3>
+                <p>Agenda and Overview</p>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#logistics">
+                <img src="img/Image2.jpeg" alt="Logistics">
+                <h3>Logistics</h3>
+                <p>Practical info & documents to sign</p>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#contact">
+                <img src="img/Image3.jpeg" alt="Contact">
+                <h3>Contact</h3>
+                <p>For questions</p>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="#participants">
+                <img src="img/Image4.jpeg" alt="Participants">
+                <h3>Participants</h3>
+                <p>NSs and IFRC teams</p>
+            </a>
+        </div>
     </div>
 
     <!-- Participants Section -->
@@ -478,6 +500,25 @@
                 </div>
             </details>
         </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="content-section">
+        <h2>Contact for Questions</h2>
+        <h3>Relating to meeting programme:</h3>
+        <p><strong>Munguntuya Sharavnyambuu</strong><br>
+        Disaster management team leader, Mongolia Red Cross Society<br>
+        Email: munguntuya.sh@redcross.mn</p>
+
+        <p><strong>Felipe Del Cid</strong><br>
+        Evolving Crisis and Disasters Lead, IFRC APRO<br>
+        Email: felipe.delcid@ifrc.org</p>
+
+        <h3>Relating to admin/logistics:</h3>
+        <p><strong>Jessie Lucien</strong><br>
+        Programme Officer, IFRC APRO<br>
+        Email: jessie.lucien@ifrc.org<br>
+        Phone: +60194060508</p>
     </div>
 
     <!-- Footer -->
