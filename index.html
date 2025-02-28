@@ -23,6 +23,36 @@
             margin-top: 1rem;
         }
 
+        /* Introduction Styles */
+        .introduction {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .key-points {
+            margin-top: 2rem;
+        }
+
+        .key-points h3 {
+            color: #d2232a;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-points ul {
+            list-style-type: disc !important;
+            padding-left: 2rem !important;
+        }
+
+        .key-points ul li {
+            margin: 0.5rem 0;
+            line-height: 1.4;
+        }
+
+        .introduction p {
+            margin-bottom: 1rem;
+        }
+
         /* Main Navigation Styles */
         .main-nav {
             background: #011E41;
@@ -198,9 +228,9 @@
         }
 
         .summary-box .summary-icon {
-            width: 50px;  /* Adjust this value as needed */
-            height: 50px; /* Adjust this value as needed */
-            object-fit: contain; /* This maintains the image aspect ratio */
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
             margin-bottom: 0.5rem;
         }
 
@@ -244,10 +274,10 @@
         }
         
         .participant-icon {
-            width: 30px; /* Set the desired width */
-            height: auto; /* Automatically adjust height to maintain aspect ratio */
-            object-fit: contain; /* Ensures the image fits within the box without distortion */
-            border-radius: 4px; /* Optional: Add rounded corners */
+            width: 30px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 4px;
         }
 
         @media (max-width: 768px) {
@@ -255,7 +285,7 @@
                 grid-template-columns: 1fr;
             }
         }
-            </style>
+    </style>
 </head>
 <body>
     <!-- Main Navigation -->
@@ -268,17 +298,17 @@
                 <div class="menu-dropdown">
                     <a href="#dcwg-reference">DCWG Reference Information</a>
                     <div class="dropdown-content">
-                        <a href="docs/DCWG TOR_Oct 2020 final.pdf" target="_blank">TOR DCWG</a>
-                        <a href="docs/2022 DCWG Vienna Meeting Minutes.pdf" target="_blank">2022 DCWG Vienna Meeting Minutes</a>
-                        <a href="docs/2023 DCWG Turin 2023 Summary Final.pdf" target="_blank">2023 DCWG Turin Meeting Minutes</a>
-                        <a href="docs/2024 DCWG Stockholmeeting minutes.pdf" target="_blank">2024 DCWG Stockholm Meeting Minutes</a>
+                        <a href="docs/DCWG TOR_Oct 2020 final.pdf">TOR DCWG</a>
+                        <a href="docs/2022 DCWG Vienna Meeting Minutes.pdf">2022 DCWG Vienna Meeting Minutes</a>
+                        <a href="docs/2023 DCWG Turin 2023 Summary Final.pdf">2023 DCWG Turin Meeting Minutes</a>
+                        <a href="docs/2024 DCWG Stockholmeeting minutes.pdf">2024 DCWG Stockholm Meeting Minutes</a>
                     </div>
                 </div>
                 <div class="menu-dropdown">
                     <a href="#logistics">Logistics Info</a>
                     <div class="dropdown-content">
-                        <a href="docs/Sampel-of-PRACTICAL-INFORMATION.pdf" target="_blank">Practical Information</a>
-                        <a href="docs/WELCOME-to-the-Disaster-Crisis-Working-Group-Meeting-in-Stockholm.pdf" target="_blank">Welcome Pack</a>
+                        <a href="docs/Sampel-of-PRACTICAL-INFORMATION.pdf">Practical Information</a>
+                        <a href="docs/WELCOME-to-the-Disaster-Crisis-Working-Group-Meeting-in-Stockholm.pdf">Welcome Pack</a>
                     </div>
                 </div>
                 <a href="#venue" style="color: white; text-decoration: none;">Venue</a>
@@ -294,12 +324,27 @@
         <p>18-20 June 2025 | Ulaanbaatar, Mongolia</p>
     </header>
 
+    <!-- Introduction Section with Narrative -->
+    <div class="content-section">
+        <section class="welcome-section">
+            <h2>Welcome to the Movement Disaster and Crisis Working Group (DCWG)</h2>
+            <p>The Movement Disaster and Crisis Working Group (DCWG) is a group of experienced disaster managers from a range of National Societies, the Federation Secretariat, and the ICRC, who come together to promote the coordination and strengthening of our collective international disaster management. The DCWG is an informal group that seeks to bring together members with relevant international disaster management experience from recent operations.</p>
+            
+            <p>The group meets to share disaster management learning and analysis, particularly through the lens of recent operational experience, and to advance disaster management approaches, ideas, and solutions related to operational coordination and delivery. The DCWG also discusses and contributes to disaster management policies.</p>
+        </section>
+
+        <section class="annual-meeting-section">
+            <h2>DCWG Annual Meeting 2025</h2>
+            <p>Building on previous meetings in Stockholm (2024), Turin (2023), and Vienna (2023), the Mongolian Red Cross Society (MRCS) will host this year's DCWG Annual Meeting from 18-20 June 2025 in Ulaanbaatar, Mongolia.</p>
+        </section>
+    </div>
+
     <!-- Icon Navigation -->
     <div class="nav-container">
         <div class="nav-item">
-            <img src="img/Image1.jpeg" alt="NS Preparedness">
+            <img src="img/Image1.jpeg" alt="DCWG Agenda">
             <h3>DCWG</h3>
-            <p>Reference information</p>
+            <p><a href="dcwg.html" style="text-decoration: none; color: #333;">Agenda and Overview</a></p>
         </div>
         <div class="nav-item">
             <img src="img/Image2.jpeg" alt="Logistics">
@@ -317,6 +362,35 @@
             <p>NSs and IFRC teams</p>
         </div>
     </div>
+
+    <!-- Venue Section -->
+    <section id="venue" class="content-section">
+        <h2>Venue</h2>
+        <p>The meeting will be held at the Mongolian Red Cross Society building:</p>
+        <p><strong>Address:</strong> The International Youth Training Center is located 68 km east of Ulaanbaatar city in Erdene soum of Tuv province. Set in 9 acres of beautiful land, the training center is just 7km from the largest horse-riding statue in the world, the Chinggis Khaan Statue, one of the most visited tourist attraction sites in Mongolia</p>
+        <div class="map-container">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2677.5232656444186!2d107.58532144606994!3d47.848828393743716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d9430a3f4d9ca09%3A0x6f6223d6a6b83fa1!2sMongolia%20Red%20Cross%20Youth%20Development%20Centre!5e0!3m2!1sen!2sid!4v1740494423067!5m2!1sen!2sid" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Transportation Section -->
+    <section id="transportation" class="content-section">
+        <h2>Transportation</h2>
+        <p>Getting to and from the venue:</p>
+        <ul>
+            <li><strong>From Chinggis Khaan International Airport:</strong> Taxi fares range from 100,000 to 150,000 MNT. Pre-booked taxis are recommended.</li>
+            <li><strong>Public Transport:</strong> Bus fare is 10,000 MNT for adults and 5,000 MNT for children. Routes include Bus line 1 and Bus line 2.</li>
+        </ul>
+    </section>
+
+
 
     <!-- Contact Section -->
     <div class="content-section">
@@ -337,76 +411,74 @@
         Phone: +60194060508</p>
     </div>
 
-<!-- Participants Section -->
-<div class="content-section">
-    <h2>Participants</h2>
-<div class="participants-summary">
-    <div class="summary-box">
-        <img src="img/rcrcs.png" alt="NS Icon" class="summary-icon">
-        <span class="count">6</span>
-        <span class="label">National Societies</span>
-    </div>
-    <div class="summary-box">
-        <img src="img/ifrc.png" alt="IFRC Icon" class="summary-icon">
-        <span class="count">4</span>
-        <span class="label">IFRC Offices</span>
-    </div>
-</div>
-    <div class="participants-details">
-        <details>
-            <summary>View National Societies</summary>
-            <div class="participants-grid">
-                <div class="participant-item">
-                    <img src="img/cross.png" alt="Indonesian Red Cross" class="participant-icon">
-                    Indonesian Red Cross
-                </div>
-                <div class="participant-item">
-                    <img src="img/cross.png" alt="American Red Cross" class="participant-icon">
-                    American Red Cross
-                </div>
-                <div class="participant-item">
-                    <img src="img/crescent.png" alt="Turkish Red Crescent" class="participant-icon">
-                    Turkish Red Crescent
-                </div>
-                <div class="participant-item">
-                    <img src="img/cross.png" alt="Timor-Leste Red Cross" class="participant-icon">
-                    Timor-Leste
-                </div>
-                <div class="participant-item">
-                    <img src="img/crescent.png" alt="Malaysian Red Crescent" class="participant-icon">
-                    Malaysian Red Crescent
-                </div>
-                <div class="participant-item">
-                    <img src="img/crescent.png" alt="Kyrgistan Red Crescent" class="participant-icon">
-                    Kyrgistan Red Crescent
-                </div>
-                <!-- Repeat for other NS -->
+    <!-- Participants Section -->
+    <div class="content-section">
+        <h2>Participants</h2>
+        <div class="participants-summary">
+            <div class="summary-box">
+                <img src="img/rcrcs.png" alt="NS Icon" class="summary-icon">
+                <span class="count">6</span>
+                <span class="label">National Societies</span>
             </div>
-        </details>
-        <details>
-            <summary>View IFRC Participants</summary>
-            <div class="participants-grid">
-                <div class="participant-item">
-                    <img src="img/ifrc-logo-only.png" alt="IFRC Asia-Pacific" class="participant-icon">
-                    IFRC Asia-Pacific
-                </div>
-                <div class="participant-item">
-                    <img src="img/ifrc-logo-only.png" alt="IFRC America" class="participant-icon">
-                    IFRC America
-                </div>
-                <div class="participant-item">
-                    <img src="img/ifrc-logo-only.png" alt="IFRC Europe" class="participant-icon">
-                    IFRC Europe
-                </div>
-                <div class="participant-item">
-                    <img src="img/ifrc-logo-only.png" alt="IFRC Africa" class="participant-icon">
-                    IFRC Africa
-                </div>
-                <!-- Repeat for other IFRC offices -->
+            <div class="summary-box">
+                <img src="img/ifrc.png" alt="IFRC Icon" class="summary-icon">
+                <span class="count">4</span>
+                <span class="label">IFRC Offices</span>
             </div>
-        </details>
+        </div>
+        <div class="participants-details">
+            <details>
+                <summary>View National Societies</summary>
+                <div class="participants-grid">
+                    <div class="participant-item">
+                        <img src="img/cross.png" alt="Indonesian Red Cross" class="participant-icon">
+                        Indonesian Red Cross
+                    </div>
+                    <div class="participant-item">
+                        <img src="img/cross.png" alt="American Red Cross" class="participant-icon">
+                        American Red Cross
+                    </div>
+                    <div class="participant-item">
+                        <img src="img/crescent.png" alt="Turkish Red Crescent" class="participant-icon">
+                        Turkish Red Crescent
+                    </div>
+                    <div class="participant-item">
+                        <img src="img/cross.png" alt="Timor-Leste Red Cross" class="participant-icon">
+                        Timor-Leste
+                    </div>
+                    <div class="participant-item">
+                        <img src="img/crescent.png" alt="Malaysian Red Crescent" class="participant-icon">
+                        Malaysian Red Crescent
+                    </div>
+                    <div class="participant-item">
+                        <img src="img/crescent.png" alt="Kyrgistan Red Crescent" class="participant-icon">
+                        Kyrgistan Red Crescent
+                    </div>
+                </div>
+            </details>
+            <details>
+                <summary>View IFRC Participants</summary>
+                <div class="participants-grid">
+                    <div class="participant-item">
+                        <img src="img/ifrc-logo-only.png" alt="IFRC Asia-Pacific" class="participant-icon">
+                        IFRC Asia-Pacific
+                    </div>
+                    <div class="participant-item">
+                        <img src="img/ifrc-logo-only.png" alt="IFRC America" class="participant-icon">
+                        IFRC America
+                    </div>
+                    <div class="participant-item">
+                        <img src="img/ifrc-logo-only.png" alt="IFRC Europe" class="participant-icon">
+                        IFRC Europe
+                    </div>
+                    <div class="participant-item">
+                        <img src="img/ifrc-logo-only.png" alt="IFRC Africa" class="participant-icon">
+                        IFRC Africa
+                    </div>
+                </div>
+            </details>
+        </div>
     </div>
-</div>
 
     <!-- Footer -->
     <footer>
