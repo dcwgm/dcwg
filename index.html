@@ -125,12 +125,8 @@
         }
 
         .nav-logo a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px; /* Fixed width for the container */
-            height: 50px; /* Fixed height for the container */
-            margin-right: 0.5rem; /* Space between logos */
+            display: block;
+            margin-right: 0.5rem; /* Add space between logos */
         }
 
         .nav-logo a:last-child {
@@ -138,30 +134,14 @@
         }
 
         .nav-logo img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
+            width: 60px; /* Reduced from 80px to 60px */
+            height: 60px; /* Reduced from 80px to 60px */
             vertical-align: middle;
             transition: transform 0.3s ease;
         }
 
-        /* Specific style for MRCS logo to make it smaller */
-        .nav-logo a:nth-child(2) img {
-            max-width: 80%; /* Make MRCS logo slightly smaller */
-            max-height: 80%;
-
         .nav-logo img:hover {
             transform: scale(1.1);
-        }
-
-        #ifrc-logo {
-        width: 50px;
-        height: 50px;
-        }
-
-        #mrcs-logo {
-        width: 40px; /* Make MRCS logo smaller */
-        height: 40px;
         }
 
         .menu-items {
