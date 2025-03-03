@@ -125,8 +125,12 @@
         }
 
         .nav-logo a {
-            display: inline-block;
-            margin-right: 0.5rem; /* Add space between logos */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px; /* Fixed width for the container */
+            height: 50px; /* Fixed height for the container */
+            margin-right: 0.5rem; /* Space between logos */
         }
 
         .nav-logo a:last-child {
@@ -134,12 +138,17 @@
         }
 
         .nav-logo img {
-            width: 60px; /* Reduced from 80px to 60px */
-            height: 60px; /* Reduced from 80px to 60px */
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
             vertical-align: middle;
             transition: transform 0.3s ease;
-            object-fit: contain; /* This ensures the logo maintains its aspect ratio */
         }
+
+        /* Specific style for MRCS logo to make it smaller */
+        .nav-logo a:nth-child(2) img {
+            max-width: 80%; /* Make MRCS logo slightly smaller */
+            max-height: 80%;
 
         .nav-logo img:hover {
             transform: scale(1.1);
